@@ -1,0 +1,86 @@
+{
+  "_args": [
+    [
+      "react-scroll@github:actorapp/react-scroll#develop",
+      "/media/alisher/3E3C8D433C8CF6E5/projects/messenger-crm-web-actor/node_modules/actor-sdk"
+    ]
+  ],
+  "_from": "actorapp/react-scroll#develop",
+  "_id": "react-scroll@0.0.1",
+  "_inCache": true,
+  "_location": "/react-scroll",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/actorapp/react-scroll/develop/package.json",
+      "gitUrl": "git://github.com/actorapp/react-scroll.git#develop",
+      "httpsUrl": "git+https://github.com/actorapp/react-scroll.git#develop",
+      "shortcut": "github:actorapp/react-scroll#develop",
+      "ssh": "git@github.com:actorapp/react-scroll.git#develop",
+      "sshUrl": "git+ssh://git@github.com/actorapp/react-scroll.git#develop",
+      "type": "github"
+    },
+    "name": "react-scroll",
+    "raw": "react-scroll@github:actorapp/react-scroll#develop",
+    "rawSpec": "github:actorapp/react-scroll#develop",
+    "scope": null,
+    "spec": "github:actorapp/react-scroll#develop",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/actor-sdk"
+  ],
+  "_resolved": "git://github.com/actorapp/react-scroll.git#7dbff2ddc57b84a5c9396b51c72f813817340a1d",
+  "_shasum": "48c4709ea9a14efadfc852a8ff8fa6a2984db6ea",
+  "_shrinkwrap": null,
+  "_spec": "react-scroll@github:actorapp/react-scroll#develop",
+  "_where": "/media/alisher/3E3C8D433C8CF6E5/projects/messenger-crm-web-actor/node_modules/actor-sdk",
+  "authors": [
+    "Joachim Karlsson"
+  ],
+  "bugs": {
+    "url": "https://github.com/actorapp/react-scroll/issues"
+  },
+  "dependencies": {},
+  "description": "A scroll component for React.js",
+  "devDependencies": {
+    "babel-core": "^4.6.0",
+    "babel-loader": "^6.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "gitHead": "7dbff2ddc57b84a5c9396b51c72f813817340a1d",
+  "homepage": "https://github.com/actorapp/react-scroll",
+  "installable": true,
+  "keywords": [
+    "react",
+    "react-component",
+    "scroll",
+    "scroller",
+    "scrolls"
+  ],
+  "license": "MIT",
+  "main": "modules",
+  "name": "react-scroll",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "readme": "## React Scroll\n\nDirective for basic scrolling and smooth scrolling ( work in progress )\nFeel free to contribute - everything is appreciated\n\n### Install\n```js\n$ npm install react-scroll\n```\n\n### Run\n```js\n$ npm install\n$ npm run examples\n```\n\n### Examples\nCheckout examples\n> Basic\n>> [Live](http://fisshy.github.io/react-scroll-example/basic/index.html)\n>> Or\n>> [Code](https://github.com/fisshy/react-scroll/blob/master/examples/basic/app.js)\n\n### Usage\n```js\n\nvar React = require('react');\nvar Scroll = require('react-scroll'); \n\nvar Link = Scroll.Link;\nvar Element = Scroll.Element;\n\nvar Section = React.createClass({\n  render: function () {\n  \treturn (\n  \t\t<Link to=\"test1\" spy={true} smooth={true} offset={50} duration={500} >Test 1</Link>\n\t\t<Button className=\"btn\" type=\"submit\" value=\"Test 2\" to=\"test2\" spy={true} smooth={true} offset={50} duration={500} >Test 2</Button>\n\n  \t\t<Element name=\"test1\" className=\"element\">\n  \t\t  test 1\n  \t\t</Element>\n\n  \t\t<Element name=\"test2\" className=\"element\">\n  \t\t  test 2\n  \t\t</Element>\n\t);\n  }\n});\n\nReact.render(\n  <Section />,\n  document.getElementById('example')\n);\n\n```\n\n#### Create your own Link/Element\n> Simply just include the mixins!\n\n```js\nvar React = require('react');\nvar Scroll = require('react-scroll'); \nvar Helpers = Scroll.Helpers;\n\nvar Element = React.createClass({\n  mixins: [Helpers.Element],\n  render: function () {\n    return (\n      <div>\n        {this.props.children}\n      </div>\n    );\n  }\n});\n\nvar Link = React.createClass({\n  mixins: [Helpers.Scroll],\n  render: function () {\n    return (\n      <a onClick={this.onClick}>\n        {this.props.children}\n      </a>\n    );\n  }\n});\n\n```\n\n\n\n### Todo\n- [x] Vertical scrolling\n- [x] Scroll to element\n- [x] Smooth scroll animation\n- [x] Live examples\n- [x] Pass scroll/animation duration as settings\n- [ ] Horizontal scrolling\n- [x] Spy on scrolling/Highlight\n- [ ] Write test\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actorapp/react-scroll.git"
+  },
+  "scripts": {
+    "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples"
+  },
+  "tags": [
+    "react",
+    "scroll"
+  ],
+  "version": "0.0.1"
+}
